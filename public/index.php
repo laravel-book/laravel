@@ -26,14 +26,14 @@ require __DIR__.'/../vendor/autoload.php';
 /**
  * Container
  *
- * Illuminate\Container\Application
+ * @varIlluminate\Container\Application
  */
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
 /**
  * Http Kernel
  *
- * App\Http\Kernel
+ * @var App\Http\Kernel
  */
 $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 
@@ -41,7 +41,8 @@ $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 /**
  * Http Response
  *
- * Illuminate\Http\Response
+ * @var Illuminate\Http\Response
+ * @see https://github.com/laravel-book/framework/blob/5.7/src/Illuminate/Foundation/Http/Kernel.php#L111 for handle method details
  */
 $response = $kernel->handle(
     /**
